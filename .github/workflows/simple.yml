@@ -1,14 +1,20 @@
-name: Shell commands
+name: Shell commands #Workflow
 
-on: [push]
+on: [push] #event-trigger
 
 jobs:
-  run-shell-command: 
-    runs-on: ubuntu-latest
+  run-shell-command: #job name
+    runs-on: ubuntu-latest #runner
     steps:
       - name: echo a string
-        run: eccho "Hello Github Workflows"
+        run: echo "Hello Github Workflows"
       - name: Multiline script
         run: |
           node -v
           npm -v
+
+      - name: python commands
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
