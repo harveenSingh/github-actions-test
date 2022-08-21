@@ -26,6 +26,7 @@ jobs:
         run: |
           get-location
           hostname
+          Get-ComputerInfo
       - name: Directory Bash
         run: pwd
         shell: bash
