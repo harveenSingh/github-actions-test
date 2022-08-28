@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest #runner
     steps:
       - name: Print working Directory
-        run: echo pwd
+        run: pwd
       - name: echo a string
         run: echo "Hello Github Workflows"
       - name: Multiline script
