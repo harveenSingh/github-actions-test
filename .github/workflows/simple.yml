@@ -6,6 +6,8 @@ jobs:
   run-shell-command: #job name
     runs-on: ubuntu-latest #runner
     steps:
+      - name: Print working Directory
+        run: echo pwd
       - name: echo a string
         run: echo "Hello Github Workflows"
       - name: Multiline script
@@ -21,7 +23,7 @@ jobs:
 
   run-windows-command: 
     runs-on: windows-2019
-    needs: [run-shell-command]
+    needs: [run-shell-command] #maked it dependant on the job "run-shell-command"
     steps:
       - name: Directory Powershell
         run: |
